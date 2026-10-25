@@ -1,4 +1,3 @@
-/* Reseteo básico */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +6,10 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fce4ec; /* Color rosa clarito de fondo por si tarda en cargar la imagen */
+    background-color: #fce4ec; /* Rosa clarito de fondo */
 }
 
-/* Hace que las imágenes ocupen todo el ancho y se adapten al móvil */
+/* Hace que las imágenes de Canva ocupen todo el ancho y se adapten al móvil */
 .seccion-imagen img {
     width: 100%;
     height: auto;
