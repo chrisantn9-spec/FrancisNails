@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Nombre - Nail Artist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Tu Nombre</h1>
+            <p class="subtitle">Nail Artist Profesional</p>
+            <a href="#reservar" class="btn">Reservar Cita</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="inicio" class="section">
+        <div class="container">
+            <h2>Sobre Mí</h2>
+            <div class="about-content">
+                <img src="fotos/perfil.jpg" alt="Tu foto" class="profile-img">
+                <div class="about-text">
+                    <p>Hola, soy [Tu Nombre]. Especialista en diseño de uñas.</p>
+                    <p>Me apasiona crear diseños únicos y personalizados para cada clienta.</p>
+                    <ul>
+                        <li>✅ Certificación profesional</li>
+                        <li>✅ Materiales de alta calidad</li>
+                        <li>✅ Higiene garantizada</li>
+                        <li>✅ Diseños personalizados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="section bg-light">
+        <div class="container">
+            <h2>Servicios y Precios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Manicura Básica</h3>
+                    <p class="price">$XX</p>
+                    <ul>
+                        <li>Limado y forma</li>
+                        <li>Cutículas</li>
+                        <li>Esmalte tradicional</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Manicura en Gel</h3>
+                    <p class="price">$XX</p>
+                    <ul>
+                        <li>Manicura completa</li>
+                        <li>Esmalte en gel</li>
+                        <li>Duración 3-4 semanas</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Diseño de Uñas</h3>
+                    <p class="price">$XX+</p>
+                    <ul>
+                        <li>Nail art personalizado</li>
+                        <li>Decoraciones</li>
+                        <li>Piedras y brillos</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Uñas Acrílicas</h3>
+                    <p class="price">$XX</p>
+                    <ul>
+                        <li>Extensiones</li>
+                        <li>Forma personalizada</li>
+                        <li>Diseño incluido</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section">
+        <div class="container">
+            <h2>Mi Trabajo</h2>
+            <div class="gallery">
+                <img src="fotos/uñas1.jpg" alt="Diseño 1">
+                <img src="fotos/uñas2.jpg" alt="Diseño 2">
+                <img src="fotos/uñas3.jpg" alt="Diseño 3">
+                <img src="fotos/uñas4.jpg" alt="Diseño 4">
+                <img src="fotos/uñas5.jpg" alt="Diseño 5">
+                <img src="fotos/uñas6.jpg" alt="Diseño 6">
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section bg-light">
+        <div class="container">
+            <h2 id="reservar">Reserva tu Cita</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p>📍 Dirección: [Tu dirección]</p>
+                    <p>📱 Teléfono: [Tu teléfono]</p>
+                    <p>📧 Email: [Tu email]</p>
+                    <p>🕐 Horario: Lun-Sáb 9:00 - 19:00</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">WhatsApp</a>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <h3>Solicitar Cita</h3>
+                    <input type="text" placeholder="Tu nombre" required>
+                    <input type="tel" placeholder="Tu teléfono" required>
+                    <select required>
+                        <option value="">Selecciona un servicio</option>
+                        <option>Manicura Básica</option>
+                        <option>Manicura en Gel</option>
+                        <option>Diseño de Uñas</option>
+                        <option>Uñas Acrílicas</option>
+                    </select>
+                    <input type="date" required>
+                    <textarea placeholder="Mensaje o diseño que deseas" rows="4"></textarea>
+                    <button type="submit" class="btn">Enviar Solicitud</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Tu Nombre - Nail Artist. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
