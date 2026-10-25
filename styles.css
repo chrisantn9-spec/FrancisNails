@@ -29,7 +29,10 @@ body {
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     background: white;
     color: #667eea;
     padding: 15px 40px;
@@ -37,10 +40,62 @@ body {
     border-radius: 50px;
     font-weight: bold;
     transition: transform 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .btn:hover {
     transform: scale(1.05);
+}
+
+/* BOTÓN WHATSAPP */
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+    font-size: 1.2rem;
+    padding: 18px 45px;
+}
+
+.whatsapp-btn:hover {
+    background: #20b858;
+}
+
+.whatsapp-btn-large {
+    background: #25D366;
+    color: white;
+    font-size: 1.3rem;
+    padding: 20px 50px;
+    width: 100%;
+}
+
+.whatsapp-btn-large:hover {
+    background: #20b858;
+}
+
+.whatsapp-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.whatsapp-icon-small {
+    width: 20px;
+    height: 20px;
+}
+
+.whatsapp-social {
+    background: #25D366 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.whatsapp-social:hover {
+    background: #20b858 !important;
+}
+
+.whatsapp-form {
+    text-align: center;
 }
 
 .main-nav {
@@ -216,30 +271,6 @@ h2 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #667eea;
-}
-
-.contact-form button {
-    width: 100%;
-    border: none;
-    cursor: pointer;
-}
-
 footer {
     background: #2c3e50;
     color: white;
@@ -273,5 +304,11 @@ footer {
     
     .contact-content {
         grid-template-columns: 1fr;
+    }
+    
+    .whatsapp-btn,
+    .whatsapp-btn-large {
+        font-size: 1rem;
+        padding: 15px 30px;
     }
 }
