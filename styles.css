@@ -5,63 +5,200 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fce4ec; /* Rosa clarito de fondo */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* Hace que las imágenes de Canva ocupen todo el ancho y se adapten al móvil */
-.seccion-imagen img {
+/* HERO CON IMAGEN */
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
     width: 100%;
     height: auto;
     display: block;
-    max-width: 100%;
 }
 
-/* Footer simple */
-footer {
-    background-color: #ff4d4d; /* Rojo/coral de tu diseño */
-    color: white;
+.hero-overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
+    z-index: 10;
 }
 
-/* BOTÓN FLOTANTE DE WHATSAPP */
-.whatsapp-flotante {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #25D366;
     color: white;
-    padding: 12px 20px;
+    padding: 18px 40px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+.btn-hero:hover {
+    background: #20b858;
+    transform: scale(1.05);
+}
+
+.whatsapp-icon {
+    width: 28px;
+    height: 28px;
+}
+
+/* SECCIONES DE IMÁGENES */
+.section {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* SECCIÓN DE CONTACTO */
+.contact-section {
+    position: relative;
+}
+
+.contact-buttons {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+}
+
+.btn-whatsapp-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #25D366;
+    color: white;
+    padding: 20px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.btn-whatsapp-large:hover {
+    background: #20b858;
+    transform: translateY(-3px);
+}
+
+.btn-email {
+    display: inline-block;
+    background: #ff4081;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 10px;
+    transition: all 0.3s;
+}
+
+.btn-email:hover {
+    background: #f50057;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.social-footer {
+    margin-top: 15px;
+}
+
+.social-link {
+    color: #25D366;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     z-index: 1000;
-    transition: transform 0.3s;
+    transition: all 0.3s;
 }
 
-.whatsapp-flotante:hover {
-    transform: scale(1.05);
-    background-color: #20b858;
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background: #20b858;
 }
 
-.whatsapp-flotante svg {
-    width: 24px;
-    height: 24px;
+.whatsapp-float svg {
+    width: 35px;
+    height: 35px;
+    fill: white;
 }
 
-/* Ajuste para móviles */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .whatsapp-flotante {
-        bottom: 15px;
-        right: 15px;
-        padding: 10px 15px;
-        font-size: 14px;
+    .btn-hero {
+        font-size: 1rem;
+        padding: 15px 30px;
+    }
+    
+    .btn-whatsapp-large {
+        font-size: 1.1rem;
+        padding: 18px 35px;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    
+    .btn-email {
+        font-size: 1rem;
+        padding: 12px 25px;
+        display: block;
+        margin: 10px auto;
+    }
+    
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
     }
 }
