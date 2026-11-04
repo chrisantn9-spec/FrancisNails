@@ -1,144 +1,117 @@
+/* Reseteo básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* FONDO TRANSPARENTE CON LOS COLORES DE TU MARCA */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+    /* Degradado suave rosa, turquesa y coral */
+    background: linear-gradient(135deg, 
+        rgba(252, 228, 236, 0.8) 0%, 
+        rgba(176, 224, 230, 0.8) 50%, 
+        rgba(255, 182, 193, 0.8) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px 0;
 }
 
-/* HERO CON IMAGEN */
-.hero {
-    position: relative;
-    width: 100%;
+/* TARJETAS CON EFECTO VIDRIO (GLASSMORPHISM) */
+.card {
+    background: rgba(255, 255, 255, 0.85); /* Blanco semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto borroso de fondo */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1000px;
+    padding: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.hero img {
+.img-full {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 15px;
 }
 
+/* BOTONES DE WHATSAPP */
 .hero-overlay {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
-    z-index: 10;
+    margin-top: 20px;
 }
 
-.btn-hero {
+.btn-whatsapp, .btn-whatsapp-large {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    gap: 10px;
     background: #25D366;
     color: white;
-    padding: 18px 40px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: all 0.3s;
-}
-
-.btn-hero:hover {
-    background: #20b858;
-    transform: scale(1.05);
-}
-
-.whatsapp-icon {
-    width: 28px;
-    height: 28px;
-}
-
-/* SECCIONES DE IMÁGENES */
-.section {
-    width: 100%;
-    margin-bottom: 0;
-}
-
-.section img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* SECCIÓN DE CONTACTO */
-.contact-section {
-    position: relative;
-}
-
-.contact-buttons {
-    text-align: center;
-    padding: 30px 20px;
-    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
-}
-
-.btn-whatsapp-large {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: #25D366;
-    color: white;
-    padding: 20px 45px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s;
-}
-
-.btn-whatsapp-large:hover {
-    background: #20b858;
-    transform: translateY(-3px);
-}
-
-.btn-email {
-    display: inline-block;
-    background: #ff4081;
-    color: white;
-    padding: 15px 35px;
+    padding: 15px 30px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-    margin: 10px;
-    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover, .btn-whatsapp-large:hover {
+    background: #20b858;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.btn-whatsapp-large {
+    width: 100%;
+    max-width: 400px;
+    font-size: 1.2rem;
+    padding: 18px 35px;
+    margin-bottom: 15px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* BOTÓN DE EMAIL */
+.btn-email {
+    display: inline-block;
+    background: #ff4081;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
 }
 
 .btn-email:hover {
     background: #f50057;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+}
+
+.contact-buttons {
+    text-align: center;
+    padding: 20px 10px 10px;
 }
 
 /* FOOTER */
 footer {
-    background: #2c3e50;
-    color: white;
     text-align: center;
-    padding: 30px 20px;
-}
-
-.social-footer {
-    margin-top: 15px;
-}
-
-.social-link {
-    color: #25D366;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.social-link:hover {
-    text-decoration: underline;
+    padding: 20px;
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: 20px;
 }
 
 /* BOTÓN FLOTANTE WHATSAPP */
@@ -147,15 +120,16 @@ footer {
     bottom: 25px;
     right: 25px;
     background: #25D366;
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     z-index: 1000;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .whatsapp-float:hover {
@@ -164,41 +138,29 @@ footer {
 }
 
 .whatsapp-float svg {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     fill: white;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE (PARA CELULARES) */
 @media (max-width: 768px) {
-    .btn-hero {
-        font-size: 1rem;
-        padding: 15px 30px;
+    body {
+        padding: 10px 0;
     }
-    
+    .card {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 15px;
+    }
     .btn-whatsapp-large {
-        font-size: 1.1rem;
-        padding: 18px 35px;
-        display: block;
-        margin: 0 auto 20px;
-    }
-    
-    .btn-email {
         font-size: 1rem;
-        padding: 12px 25px;
-        display: block;
-        margin: 10px auto;
+        padding: 15px 25px;
     }
-    
     .whatsapp-float {
         width: 55px;
         height: 55px;
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    .whatsapp-float svg {
-        width: 28px;
-        height: 28px;
+        bottom: 15px;
+        right: 15px;
     }
 }
