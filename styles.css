@@ -1,98 +1,195 @@
+/* FUENTE MODERNA Y LIMPIA */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* FONDO FUTURISTA LIMPIO */
 body {
-    font-family: Arial, sans-serif;
-    /* Fondo de colores sólido y visible */
-    background: linear-gradient(135deg, #fce4ec 0%, #b0e0e6 50%, #ffb6c1 100%);
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a;
+    /* Gradiente sutil y limpio con toques de luz */
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f1f3f5 100%);
     background-attachment: fixed;
     min-height: 100vh;
-    padding: 20px;
+    padding: 40px 20px;
+    position: relative;
+    overflow-x: hidden;
 }
 
+/* Efecto de luz de fondo (Orbes futuristas) */
+body::before, body::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.4;
+}
+body::before {
+    width: 400px;
+    height: 400px;
+    background: #ffd1dc; /* Rosa pastel suave */
+    top: -100px;
+    left: -100px;
+}
+body::after {
+    width: 500px;
+    height: 500px;
+    background: #d0f4f7; /* Turquesa muy suave */
+    bottom: -150px;
+    right: -150px;
+}
+
+/* TARJETAS DE CRISTAL (GLASSMORPHISM) */
 .card {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin: 20px auto;
-    max-width: 1000px;
-    padding: 10px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    margin: 30px auto;
+    max-width: 1100px;
+    padding: 20px;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
 }
 
 .img-full {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
+/* VIDEO */
+.video-card {
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+.video-card:hover {
+    transform: none;
+}
+
+/* BOTONES FUTURISTAS */
 .hero-overlay {
     text-align: center;
-    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .btn-whatsapp, .btn-whatsapp-large {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    background: #25D366;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
     color: white;
-    padding: 15px 30px;
+    padding: 16px 35px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.1rem;
-    margin: 10px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
-.btn-email {
-    display: inline-block;
-    background: #ff4081;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 10px;
+.btn-whatsapp:hover, .btn-whatsapp-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+    background: linear-gradient(135deg, #20b858, #0e7a6e);
 }
 
+.btn-whatsapp-large {
+    width: 100%;
+    max-width: 400px;
+    font-size: 1.2rem;
+    padding: 18px 40px;
+    margin-bottom: 15px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-buttons {
+    text-align: center;
+    padding: 30px 10px 10px;
+}
+
+/* FOOTER LIMPIO */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP */
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    width: 60px;
-    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.8);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
 }
 
 .whatsapp-float svg {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     fill: white;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #555;
-}
-
+/* RESPONSIVE (CELULARES) */
 @media (max-width: 768px) {
-    .card { margin: 10px 0; }
-    .btn-whatsapp, .btn-whatsapp-large, .btn-email { 
-        display: block; 
-        width: 90%; 
-        margin: 10px auto; 
-        text-align: center;
+    body {
+        padding: 15px 10px;
+    }
+    .card {
+        margin: 20px 0;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    .btn-whatsapp-large {
+        font-size: 1rem;
+        padding: 15px 25px;
+    }
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
     }
 }
