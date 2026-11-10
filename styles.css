@@ -121,7 +121,7 @@ body::after {
     box-shadow: 0 8px 25px rgba(157, 78, 221, 0.5);
 }
 
-/* ===== TARJETAS CON ANIMACIÓN DE ENTRADA ===== */
+/* ===== TARJETAS ===== */
 .card {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(15px);
@@ -174,13 +174,13 @@ body::after {
     transform: scale(1.03);
 }
 
-/* ===== VIDEO FUTURISTA ===== */
+/* ===== VIDEO FUTURISTA (LIMPIO) ===== */
 .video-card-futuristic {
     background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(248,240,255,0.9));
     border: 2px solid transparent;
     background-clip: padding-box;
     position: relative;
-    padding: 0;
+    padding: 0; /* Sin padding para que el video ocupe todo */
     animation: neonPulse 3s ease-in-out infinite alternate, fadeInUp 0.8s forwards;
 }
 
@@ -222,40 +222,13 @@ body::after {
     mix-blend-mode: overlay;
 }
 
-.card-content {
-    padding: 36px 24px 28px;
+/* ===== BOTONES ===== */
+.hero-overlay {
     text-align: center;
+    margin-top: 24px;
+    margin-bottom: 8px;
 }
 
-.card-title {
-    font-size: 2.2rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #e91e8c, #9d4edd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 12px;
-    letter-spacing: -1px;
-    animation: shimmer 3s infinite linear;
-    background-size: 200% auto;
-}
-
-@keyframes shimmer {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
-}
-
-.card-subtitle {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 28px;
-    line-height: 1.6;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ===== BOTONES CON VIDA ===== */
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -320,6 +293,27 @@ body::after {
 .contact-buttons {
     text-align: center;
     padding: 32px 10px 12px;
+}
+
+/* ===== IMAGEN FLOTANTE EN LA ESQUINA ===== */
+.floating-corner-img {
+    position: fixed;
+    bottom: 110px; /* Arriba del botón de WhatsApp */
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* La hace redonda */
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(233, 30, 140, 0.4);
+    z-index: 999;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+    animation: floatOrb 6s ease-in-out infinite alternate;
+}
+
+.floating-corner-img:hover {
+    transform: scale(1.15) rotate(10deg);
 }
 
 /* ===== FOOTER ===== */
@@ -488,24 +482,61 @@ body::after {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE (OPTIMIZADO PARA CELULARES) ===== */
 @media (max-width: 768px) {
-    body { padding-top: 70px; }
+    body { 
+        padding-top: 70px; 
+        font-size: 16px; /* Tamaño base legible en móvil */
+    }
     .nav-container { padding: 0 20px; }
     .logo-text { font-size: 1.2rem; }
     .nav-btn { padding: 8px 18px; font-size: 0.9rem; }
     
-    .card { margin: 20px 15px; padding: 15px; border-radius: 20px; }
+    .card { 
+        margin: 20px 15px; 
+        padding: 15px; 
+        border-radius: 20px; 
+    }
     .video-card-futuristic { padding: 0; }
-    .card-content { padding: 28px 16px 20px; }
-    .card-title { font-size: 1.8rem; }
-    .card-subtitle { font-size: 1rem; }
-    .btn-large { font-size: 1.1rem; padding: 16px 28px; }
+    
+    /* Ajuste de letras para que no se salgan en celular */
+    .card-title { 
+        font-size: 1.6rem; 
+        padding: 0 10px;
+    }
+    .card-subtitle { 
+        font-size: 1rem; 
+        padding: 0 15px;
+        line-height: 1.5;
+    }
+    .btn-primary { 
+        font-size: 1rem; 
+        padding: 14px 24px; 
+        width: 90%;
+        margin: 0 auto;
+    }
+    .btn-large { 
+        font-size: 1.05rem; 
+        padding: 16px 28px; 
+    }
     
     .footer-container { padding: 0 20px; }
     .footer-row { grid-template-columns: 1fr; gap: 24px; }
     .footer-bottom { flex-direction: column; text-align: center; }
     
-    .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
+    .whatsapp-float { 
+        width: 50px; 
+        height: 50px; 
+        bottom: 20px; 
+        right: 20px; 
+    }
     .whatsapp-float svg { width: 24px; height: 24px; }
+    
+    /* Ajuste de la imagen flotante en móvil */
+    .floating-corner-img {
+        width: 60px;
+        height: 60px;
+        bottom: 90px;
+        left: 15px;
+    }
 }
