@@ -10,7 +10,7 @@ body {
     animation: gradientBG 15s ease infinite;
     min-height: 100vh;
     line-height: 1.6;
-    padding-top: 200px; /* Espacio para que no lo tape el navbar */
+    padding-top: 185px; /* Ajustado al tamaño exacto del logo */
     position: relative;
     overflow-x: hidden;
 }
@@ -28,7 +28,7 @@ body::before { width: 500px; height: 500px; background: #e91e8c; top: -150px; le
 body::after { width: 600px; height: 600px; background: #9d4edd; bottom: -200px; right: -200px; animation: floatOrb 15s ease-in-out infinite alternate-reverse; }
 @keyframes floatOrb { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(50px, 50px) scale(1.1); } }
 
-/* ===== NAVBAR AJUSTADO AL LOGO (SIN ALTURA FIJA) ===== */
+/* ===== NAVBAR PEGADO AL BORDE SUPERIOR ===== */
 .navbar {
     position: fixed;
     top: 0;
@@ -39,12 +39,11 @@ body::after { width: 600px; height: 600px; background: #9d4edd; bottom: -200px; 
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(233, 30, 140, 0.1);
     z-index: 1000;
-    padding: 8px 20px; /* Margen pequeño para enmarcar el logo */
+    padding: 0 20px; /* Padding superior en 0 para que toque el borde */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Quitamos la altura fija para que se ajuste solo al logo */
 }
 
 .logo-link {
@@ -301,8 +300,8 @@ body::after { width: 600px; height: 600px; background: #9d4edd; bottom: -200px; 
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    body { padding-top: 135px; }
-    .navbar { padding: 5px 15px; } /* Quitamos la altura fija en móvil también */
+    body { padding-top: 125px; }
+    .navbar { padding: 0 15px; } /* Pegado al borde en móvil también */
     .logo-img { height: 120px; }
     .nav-btn { padding: 8px 18px; font-size: 0.9rem; }
     .card { margin: 20px 15px; padding: 15px; border-radius: 20px; }
