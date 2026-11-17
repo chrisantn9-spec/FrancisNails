@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ===== FONDO ROSA FUERTE PARA QUE RESALTE EL CRISTAL ===== */
+/* ===== FONDO ROSA FUERTE ===== */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: #222;
@@ -14,7 +14,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== LOGO GIGANTE DE FONDO (MARCA DE AGUA) ===== */
+/* ===== LOGO GIGANTE DE FONDO ===== */
 .bg-logo {
     position: fixed;
     top: 50%;
@@ -22,25 +22,25 @@ body {
     transform: translate(-50%, -50%);
     width: 80vw;
     max-width: 800px;
-    opacity: 0.1; /* Sutil para que se vea a través del cristal */
+    opacity: 0.12;
     z-index: 0;
     pointer-events: none;
 }
 .bg-logo img { width: 100%; height: auto; display: block; }
 
-/* ===== NAVBAR CRISTAL ===== */
+/* ===== NAVBAR CRISTAL PURO ===== */
 .navbar {
     position: fixed;
     top: 20px; left: 20px; right: 20px;
     height: 100px;
-    background: rgba(255, 255, 255, 0.25); /* Transparente */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.08); /* Casi transparente */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 20px;
     z-index: 1000;
     padding: 0 25px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,18 +54,18 @@ body {
     background: rgba(255, 255, 255, 0.9);
     color: #e91e8c; padding: 10px 24px; border-radius: 30px; text-decoration: none;
     font-weight: 800; font-size: 0.95rem; transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 .nav-btn:hover { transform: translateY(-3px) scale(1.05); background: white; }
 
-/* ===== 🪟 TODOS LOS CARTELES CRISTAL ===== */
+/* ===== 🪟 CARTELES CRISTAL PURO (SIN COLOR DE FONDO) ===== */
 .card {
-    background: rgba(255, 255, 255, 0.25); /* Muy transparente para ver el fondo rosa */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.08); /* Cristal puro, casi sin tinte */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 24px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     margin: 30px auto;
     max-width: 1100px;
     padding: 20px;
@@ -76,9 +76,10 @@ body {
 }
 
 .card:hover {
-    background: rgba(255, 255, 255, 0.4); /* Se aclara un poco al pasar el mouse */
+    background: rgba(255, 255, 255, 0.18); /* Se aclara un poquito al pasar el mouse */
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
 .animate-up { opacity: 0; transform: translateY(40px); animation: fadeInUp 0.8s ease forwards; }
@@ -94,16 +95,15 @@ body {
 .video-futuristic { width: 100%; height: auto; display: block; }
 .video-buttons { text-align: center; padding: 20px 10px 10px; }
 
-/* ===== ✨ ÚLTIMO CARTEL: CRISTAL + DESTELLO INFINITO ===== */
+/* ===== ✨ CARTEL PROMOCIONES: CRISTAL + DESTELLO ===== */
 .promos-card {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     overflow: hidden;
 }
 
-/* El destello de luz que viaja infinitamente por los bordes */
 .promos-card::before {
     content: '';
     position: absolute;
@@ -126,8 +126,8 @@ body {
 }
 
 .promo-content { padding: 35px 25px; position: relative; z-index: 3; }
-.promo-title { font-size: 2rem; font-weight: 800; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.2); margin-bottom: 25px; }
-.promo-text { font-size: 1.15rem; color: #fff; line-height: 1.7; margin-bottom: 20px; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+.promo-title { font-size: 2rem; font-weight: 800; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.3); margin-bottom: 25px; }
+.promo-text { font-size: 1.15rem; color: #fff; line-height: 1.7; margin-bottom: 20px; text-shadow: 0 1px 3px rgba(0,0,0,0.25); }
 .promo-text:last-child { margin-bottom: 0; }
 .promo-text strong { color: #ffeb3b; font-weight: 800; }
 
@@ -138,9 +138,9 @@ body {
     background: white; color: #e91e8c;
     padding: 14px 28px; border-radius: 50px; text-decoration: none;
     font-weight: 800; font-size: 1rem; transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
-.btn-primary:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); }
+.btn-primary:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); }
 .btn-primary svg, .icon { width: 16px !important; height: 16px !important; flex-shrink: 0; }
 .pulse-btn { animation: pulseRing 2s infinite; }
 @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
@@ -150,11 +150,11 @@ body {
 /* ===== FOOTER CRISTAL ===== */
 .footer-card { padding: 40px 30px 24px; }
 .footer-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 32px; }
-.footer-col h4 { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+.footer-col h4 { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
 .footer-col ul { list-style: none; }
-.footer-col li { font-size: 0.95rem; color: rgba(255,255,255,0.9); margin-bottom: 10px; }
+.footer-col li { font-size: 0.95rem; color: rgba(255,255,255,0.95); margin-bottom: 10px; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
 .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.3); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-.footer-bottom p { font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+.footer-bottom p { font-size: 0.9rem; color: rgba(255,255,255,0.85); }
 .social-link { color: #fff; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
 .social-link:hover { text-decoration: underline; }
 
