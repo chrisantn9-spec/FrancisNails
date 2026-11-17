@@ -10,7 +10,7 @@ body {
     animation: gradientBG 15s ease infinite;
     min-height: 100vh;
     line-height: 1.6;
-    padding-top: 150px; /* Compensa el logo que cuelga */
+    padding-top: 150px;
     position: relative;
     overflow-x: hidden;
 }
@@ -28,98 +28,36 @@ body::before { width: 500px; height: 500px; background: #e91e8c; top: -150px; le
 body::after { width: 600px; height: 600px; background: #9d4edd; bottom: -200px; right: -200px; animation: floatOrb 15s ease-in-out infinite alternate-reverse; }
 @keyframes floatOrb { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(50px, 50px) scale(1.1); } }
 
-/* ===== NAVBAR DELGADO (MEDALLÓN COLGANTE) ===== */
+/* ===== NAVBAR DELGADO ===== */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px; /* ✅ BORDE BLANCO DELGADO */
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(233, 30, 140, 0.1);
-    z-index: 1000;
-    padding: 0 20px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
-    display: flex;
-    justify-content: flex-end; /* Botón a la derecha */
-    align-items: center;
+    position: fixed; top: 0; left: 0; right: 0; height: 60px;
+    background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(233, 30, 140, 0.1); z-index: 1000; padding: 0 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04); display: flex; justify-content: flex-end; align-items: center;
 }
 
-/* ✅ Logo grande que CUELGA por debajo del borde blanco */
-.logo-link {
-    position: absolute;
-    left: 20px;
-    top: 0;
-    height: 130px;
-    display: flex;
-    align-items: flex-start;
-    text-decoration: none;
-    z-index: 1001;
-}
-
-.logo-img {
-    height: 130px;
-    width: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-    filter: drop-shadow(0 6px 14px rgba(233, 30, 140, 0.3));
-    display: block;
-}
+.logo-link { position: absolute; left: 20px; top: 0; height: 130px; display: flex; align-items: flex-start; text-decoration: none; z-index: 1001; }
+.logo-img { height: 130px; width: auto; object-fit: contain; transition: transform 0.3s ease; filter: drop-shadow(0 6px 14px rgba(233, 30, 140, 0.3)); display: block; }
 .logo-img:hover { transform: scale(1.05); }
 
-.nav-btn {
-    background: linear-gradient(135deg, #e91e8c, #9d4edd);
-    color: white;
-    padding: 10px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.95rem;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 15px rgba(233, 30, 140, 0.3);
-}
+.nav-btn { background: linear-gradient(135deg, #e91e8c, #9d4edd); color: white; padding: 10px 24px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 4px 15px rgba(233, 30, 140, 0.3); }
 .nav-btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 8px 25px rgba(157, 78, 221, 0.5); }
 
 /* ===== TARJETAS ===== */
-.card {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 24px;
-    box-shadow: 0 10px 40px rgba(157, 78, 221, 0.1);
-    margin: 30px auto;
-    max-width: 1100px;
-    padding: 20px;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    position: relative;
-}
+.card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-radius: 24px; box-shadow: 0 10px 40px rgba(157, 78, 221, 0.1); margin: 30px auto; max-width: 1100px; padding: 20px; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 1px solid rgba(255, 255, 255, 0.9); position: relative; }
 
 .animate-up { opacity: 0; transform: translateY(40px); animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
 .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.3s; } .delay-4 { animation-delay: 0.4s; } .delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
 @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 .card:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 20px 50px rgba(157, 78, 221, 0.25); border-color: rgba(233, 30, 140, 0.3); }
 .img-full { width: 100%; height: auto; display: block; border-radius: 18px; transition: transform 0.5s ease; }
 .card:hover .img-full { transform: scale(1.03); }
 
 /* ===== VIDEO ===== */
-.video-card-futuristic {
-    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(248,240,255,0.9));
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    position: relative;
-    padding: 0;
-    animation: neonPulse 3s ease-in-out infinite alternate, fadeInUp 0.8s forwards;
-}
-.video-card-futuristic::before {
-    content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px;
-    background: linear-gradient(135deg, #e91e8c, #9d4edd, #e91e8c); background-size: 200% 200%;
-    border-radius: 26px; z-index: -1; animation: gradientBG 4s ease infinite;
-}
+.video-card-futuristic { background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(248,240,255,0.9)); border: 2px solid transparent; background-clip: padding-box; position: relative; padding: 0; animation: neonPulse 3s ease-in-out infinite alternate, fadeInUp 0.8s forwards; }
+.video-card-futuristic::before { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; background: linear-gradient(135deg, #e91e8c, #9d4edd, #e91e8c); background-size: 200% 200%; border-radius: 26px; z-index: -1; animation: gradientBG 4s ease infinite; }
 @keyframes neonPulse { 0% { box-shadow: 0 0 20px rgba(233, 30, 140, 0.3); } 100% { box-shadow: 0 0 40px rgba(157, 78, 221, 0.6), 0 0 60px rgba(233, 30, 140, 0.3); } }
 .video-container { position: relative; width: 100%; overflow: hidden; }
 .video-futuristic { width: 100%; height: auto; display: block; border-radius: 18px; }
@@ -127,32 +65,17 @@ body::after { width: 600px; height: 600px; background: #9d4edd; bottom: -200px; 
 .video-buttons { text-align: center; padding: 20px; }
 
 /* ===== 🎁 SECCIÓN PROMOCIONES ===== */
-.promos-card {
-    background: linear-gradient(135deg, rgba(255, 240, 245, 0.95), rgba(248, 240, 255, 0.95));
-    border: 2px dashed rgba(233, 30, 140, 0.4);
-    text-align: center;
-}
+.promos-card { background: linear-gradient(135deg, rgba(255, 240, 245, 0.95), rgba(248, 240, 255, 0.95)); border: 2px dashed rgba(233, 30, 140, 0.4); text-align: center; }
 .promos-card:hover { border-color: rgba(157, 78, 221, 0.6); }
 .promo-content { padding: 35px 25px; }
-.promo-title {
-    font-size: 2rem; font-weight: 800;
-    background: linear-gradient(135deg, #e91e8c, #9d4edd);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    margin-bottom: 25px; letter-spacing: -0.5px;
-}
+.promo-title { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, #e91e8c, #9d4edd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 25px; letter-spacing: -0.5px; }
 .promo-text { font-size: 1.15rem; color: #444; line-height: 1.7; margin-bottom: 20px; }
 .promo-text:last-child { margin-bottom: 0; }
 .promo-text strong { color: #e91e8c; font-weight: 800; }
 
 /* ===== BOTONES ===== */
 .hero-overlay { text-align: center; margin-top: 24px; margin-bottom: 8px; }
-.btn-primary {
-    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-    background: linear-gradient(135deg, #e91e8c, #9d4edd); color: white;
-    padding: 14px 28px; border-radius: 50px; text-decoration: none;
-    font-weight: 700; font-size: 1rem; transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(233, 30, 140, 0.4); border: 2px solid rgba(255,255,255,0.4); position: relative; overflow: hidden;
-}
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #e91e8c, #9d4edd); color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(233, 30, 140, 0.4); border: 2px solid rgba(255,255,255,0.4); position: relative; overflow: hidden; }
 .btn-primary:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 12px 30px rgba(157, 78, 221, 0.6); }
 .btn-primary::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: left 0.5s ease; }
 .btn-primary:hover::after { left: 100%; }
