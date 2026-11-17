@@ -20,19 +20,41 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+/* Orbes de color de fondo */
 body::before, body::after {
-    content: ''; position: fixed; border-radius: 50%; filter: blur(100px); z-index: -1; opacity: 0.7;
+    content: ''; position: fixed; border-radius: 50%; filter: blur(100px); z-index: -2; opacity: 0.7;
 }
 body::before { width: 500px; height: 500px; background: #ff80ab; top: -100px; left: -100px; animation: floatOrb 12s ease-in-out infinite alternate; }
 body::after { width: 600px; height: 600px; background: #ce93d8; bottom: -150px; right: -150px; animation: floatOrb 15s ease-in-out infinite alternate-reverse; }
 @keyframes floatOrb { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(50px, 50px) scale(1.1); } }
+
+/* ===== 🌟 LOGO GIGANTE DE FONDO (MARCA DE AGUA) ===== */
+body::before {
+    content: '';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 900px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-image: url('6.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.12; /* Muy sutil para que no moleste */
+    z-index: -1;
+    filter: blur(1px);
+    pointer-events: none;
+}
 
 /* ===== NAVBAR CRISTAL ===== */
 .navbar {
     position: fixed;
     top: 20px; left: 20px; right: 20px;
     height: 100px;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1.5px solid rgba(255, 255, 255, 0.8);
@@ -45,7 +67,7 @@ body::after { width: 600px; height: 600px; background: #ce93d8; bottom: -150px; 
     align-items: center;
     transition: all 0.3s ease;
 }
-.navbar:hover { background: rgba(255, 255, 255, 0.6); }
+.navbar:hover { background: rgba(255, 255, 255, 0.55); }
 
 .logo-link { text-decoration: none; display: flex; align-items: center; height: 100%; }
 .logo-img { height: 85px; width: auto; object-fit: contain; transition: transform 0.3s ease; }
@@ -59,14 +81,14 @@ body::after { width: 600px; height: 600px; background: #ce93d8; bottom: -150px; 
 }
 .nav-btn:hover { transform: translateY(-3px) scale(1.05); }
 
-/* ===== 🪟 TODOS LOS CARTELES CRISTAL (IGUALES) ===== */
+/* ===== 🪟 TODOS LOS CARTELES CRISTAL (MUY TRANSPARENTES) ===== */
 .card {
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3); /* Muy transparente para ver el logo de fondo */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
     border-radius: 24px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
     margin: 30px auto;
     max-width: 1100px;
     padding: 20px;
@@ -76,7 +98,7 @@ body::after { width: 600px; height: 600px; background: #ce93d8; bottom: -150px; 
 }
 
 .card:hover {
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.5); /* Se aclara un poco al pasar el mouse */
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
@@ -97,8 +119,8 @@ body::after { width: 600px; height: 600px; background: #ce93d8; bottom: -150px; 
 
 /* ===== ✨ ÚLTIMO CARTEL: BRILLO EN BORDES AL TOCARLO ===== */
 .promos-card {
-    background: rgba(255, 240, 245, 0.45);
-    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 240, 245, 0.3);
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
     overflow: visible;
 }
 
@@ -126,7 +148,7 @@ body::after { width: 600px; height: 600px; background: #ce93d8; bottom: -150px; 
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255, 240, 245, 0.95);
+    background: rgba(255, 240, 245, 0.85);
     border-radius: 24px;
     z-index: -1;
 }
