@@ -3,12 +3,13 @@
 /* ===== FONDO ROSA PASTEL ===== */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color: #222;
+    color: #1a1a1a; /* Texto general NEGRO */
     background: linear-gradient(135deg, #ff8fab 0%, #ffb3c6 50%, #ffc2d1 100%);
     background-attachment: fixed;
     min-height: 100vh;
-    line-height: 1.6;
-    padding-top: 180px; /* Más espacio arriba por el navbar grande */
+    line-height: 1.7;
+    font-size: 18px; /* ✅ LETRA BASE MÁS GRANDE */
+    padding-top: 180px;
     padding-bottom: 40px;
     position: relative;
     overflow-x: hidden;
@@ -28,11 +29,11 @@ body {
 }
 .bg-logo img { width: 100%; height: auto; display: block; }
 
-/* ===== 🪟 NAVBAR MÁS GRANDE PARA EL LOGO GIGANTE ===== */
+/* ===== 🪟 NAVBAR VIDRIO PURO ===== */
 .navbar {
     position: fixed;
     top: 20px; left: 20px; right: 20px;
-    height: 150px; /* Navbar más alto para el logo gigante */
+    height: 150px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
@@ -53,9 +54,9 @@ body {
     height: 100%;
 }
 
-/* 💎 LOGO GIGANTE - OCUPA CASI TODO EL NAVBAR */
+/* 💎 LOGO GIGANTE */
 .logo-img { 
-    height: 140px; /* ¡GIGANTE! Casi el alto completo del navbar */
+    height: 140px;
     width: auto; 
     object-fit: contain; 
     transition: transform 0.3s ease;
@@ -63,23 +64,22 @@ body {
 }
 .logo-img:hover { transform: scale(1.05); }
 
-/* 💎 BOTÓN RESERVAR DEL NAVBAR - CRISTAL CON DESTELLO ROSADO */
+/* 💎 BOTÓN RESERVAR - CRISTAL CON DESTELLO ROSADO */
 .nav-btn {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    color: #fff;
-    padding: 12px 28px;
+    color: #1a1a1a; /* ✅ NEGRO */
+    padding: 14px 30px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 1.15rem; /* ✅ MÁS GRANDE */
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(216, 27, 96, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.5);
     position: relative;
     overflow: hidden;
-    text-shadow: 0 1px 3px rgba(216, 27, 96, 0.3);
 }
 
 .nav-btn::after {
@@ -104,7 +104,7 @@ body {
     left: 100%;
 }
 
-/* ===== 🪟 CARTELES VIDRIO PURO (5% DE BLANCO) ===== */
+/* ===== 🪟 CARTELES VIDRIO PURO ===== */
 .card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px) saturate(180%);
@@ -141,7 +141,7 @@ body {
 .video-futuristic { width: 100%; height: auto; display: block; }
 .video-buttons { text-align: center; padding: 20px 10px 10px; }
 
-/* ===== ✨ CARTEL PROMOCIONES CON DESTELLO INFINITO ===== */
+/* ===== ✨ CARTEL PROMOCIONES ===== */
 .promos-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px) saturate(180%);
@@ -172,10 +172,22 @@ body {
 }
 
 .promo-content { padding: 35px 25px; position: relative; z-index: 3; }
-.promo-title { font-size: 2rem; font-weight: 800; color: #fff; text-shadow: 0 2px 10px rgba(216, 27, 96, 0.5); margin-bottom: 25px; }
-.promo-text { font-size: 1.15rem; color: #fff; line-height: 1.7; margin-bottom: 20px; text-shadow: 0 1px 5px rgba(216, 27, 96, 0.4); }
+.promo-title { 
+    font-size: 2.4rem; /* ✅ MÁS GRANDE */
+    font-weight: 800; 
+    color: #1a1a1a; /* ✅ NEGRO */
+    margin-bottom: 25px;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.4);
+}
+.promo-text { 
+    font-size: 1.3rem; /* ✅ MÁS GRANDE */
+    color: #1a1a1a; /* ✅ NEGRO */
+    line-height: 1.8; 
+    margin-bottom: 20px;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.3);
+}
 .promo-text:last-child { margin-bottom: 0; }
-.promo-text strong { color: #ffeb3b; font-weight: 800; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+.promo-text strong { color: #d81b60; font-weight: 800; } /* Rosa oscuro para resaltar */
 
 /* ===== 💎 BOTONES DE RESERVA - CRISTAL CON DESTELLO ROSADO ===== */
 .hero-overlay { text-align: center; margin-top: 24px; margin-bottom: 8px; }
@@ -188,19 +200,18 @@ body {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    color: #fff;
-    padding: 14px 28px;
+    color: #1a1a1a; /* ✅ NEGRO */
+    padding: 16px 32px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 1.2rem; /* ✅ MÁS GRANDE */
     transition: all 0.3s ease;
     box-shadow: 0 6px 20px rgba(216, 27, 96, 0.2);
     margin: 10px 0;
     border: 1px solid rgba(255, 255, 255, 0.5);
     position: relative;
     overflow: hidden;
-    text-shadow: 0 1px 3px rgba(216, 27, 96, 0.3);
 }
 
 .btn-primary::after {
@@ -225,63 +236,72 @@ body {
     left: 100%;
 }
 
-.btn-primary svg, .icon { width: 16px !important; height: 16px !important; flex-shrink: 0; }
+.btn-primary svg, .icon { width: 18px !important; height: 18px !important; flex-shrink: 0; }
 .pulse-btn { animation: pulseRing 2s infinite; }
 @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
-.btn-large { width: 100%; max-width: 450px; font-size: 1.05rem; padding: 16px 28px; }
+.btn-large { width: 100%; max-width: 450px; font-size: 1.2rem; padding: 18px 32px; }
 .contact-buttons { text-align: center; padding: 20px 10px 10px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
 
 /* ===== NÚMERO DE TELÉFONO CLICABLE ===== */
 .phone-link {
-    color: #fff;
+    color: #1a1a1a; /* ✅ NEGRO */
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.15rem; /* ✅ MÁS GRANDE */
     transition: all 0.3s ease;
-    border-bottom: 1px dashed rgba(255,255,255,0.7);
+    border-bottom: 2px dashed rgba(216, 27, 96, 0.5);
 }
 .phone-link:hover {
-    color: #ffeb3b;
-    border-bottom: 1px solid #ffeb3b;
+    color: #d81b60;
+    border-bottom: 2px solid #d81b60;
 }
 
-/* ===== FOOTER VIDRIO PURO ===== */
+/* ===== FOOTER VIDRIO PURO (SIN HORARIOS) ===== */
 .footer-card { padding: 40px 30px 24px; }
-.footer-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 32px; }
-.footer-col h4 { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 2px 8px rgba(216, 27, 96, 0.5); }
+.footer-row { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /* ✅ Ahora solo 2 columnas */
+    gap: 40px; 
+    margin-bottom: 32px; 
+}
+.footer-col h4 { 
+    font-size: 1.3rem; /* ✅ MÁS GRANDE */
+    font-weight: 800; 
+    color: #1a1a1a; /* ✅ NEGRO */
+    margin-bottom: 16px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
 .footer-col ul { list-style: none; }
-.footer-col li { font-size: 0.95rem; color: rgba(255,255,255,0.95); margin-bottom: 10px; text-shadow: 0 1px 4px rgba(216, 27, 96, 0.4); }
-.footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.4); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-.footer-bottom p { font-size: 0.9rem; color: rgba(255,255,255,0.9); }
-.social-link { color: #fff; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
+.footer-col li { 
+    font-size: 1.1rem; /* ✅ MÁS GRANDE */
+    color: #1a1a1a; /* ✅ NEGRO */
+    margin-bottom: 12px; 
+    line-height: 1.6;
+}
+.footer-bottom { 
+    border-top: 1px solid rgba(26, 26, 26, 0.2); 
+    padding-top: 24px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 16px; 
+}
+.footer-bottom p { 
+    font-size: 1rem; 
+    color: #1a1a1a; /* ✅ NEGRO */
+}
+.social-link { 
+    color: #d81b60; /* Rosa oscuro para resaltar */
+    text-decoration: none; 
+    font-weight: 700; 
+    font-size: 1.1rem;
+}
 .social-link:hover { text-decoration: underline; }
 
 /* ===== WHATSAPP FLOTANTE ===== */
 .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); z-index: 1000; transition: all 0.3s ease; text-decoration: none; border: 3px solid white; animation: bounceFloat 3s ease-in-out infinite; }
 @keyframes bounceFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 .whatsapp-float:hover { animation: none; transform: scale(1.15) rotate(10deg); }
-.whatsapp-float svg { width: 24px !important; height: 24px !important; fill: white; }
-
-/* ===== LIGHTBOX ===== */
-.lightbox { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); backdrop-filter: blur(10px); justify-content: center; align-items: center; }
-.lightbox-content { max-width: 90%; max-height: 90%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
-.close-btn { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; z-index: 2001; }
-.close-btn:hover { color: #ff8fab; }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    body { padding-top: 120px; }
-    .navbar { top: 12px; left: 12px; right: 12px; height: 100px; padding: 0 20px; border-radius: 18px; }
-    .logo-img { height: 95px; } /* Logo gigante en móvil también */
-    .nav-btn { padding: 10px 18px; font-size: 0.9rem; }
-    .card { margin: 20px 12px; padding: 15px; border-radius: 20px; }
-    .promo-content { padding: 25px 15px; }
-    .promo-title { font-size: 1.6rem; }
-    .promo-text { font-size: 1.05rem; }
-    .btn-primary { font-size: 0.95rem; padding: 12px 22px; width: 90%; margin: 0 auto; }
-    .btn-large { font-size: 1rem; padding: 14px 24px; }
-    .footer-card { padding: 25px 20px 20px; }
-    .footer-row { grid-template-columns: 1fr; gap: 24px; }
-    .footer-bottom { flex-direction: column; text-align: center; }
-    .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
-    .whatsapp-float svg { width: 22px !important; height: 22px !important; }
-}
+.whatsapp
