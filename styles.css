@@ -15,19 +15,132 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== LOGO GIGANTE DE FONDO ===== */
-.bg-logo {
+/* ===== 💎 LOGOS FLOTANTES DE FONDO ===== */
+.floating-logos {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw;
-    max-width: 800px;
-    opacity: 0.22;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 0;
     pointer-events: none;
+    overflow: hidden;
 }
-.bg-logo img { width: 100%; height: auto; display: block; }
+
+.float-logo {
+    position: absolute;
+    opacity: 0.15;
+    filter: drop-shadow(0 0 20px rgba(255, 64, 129, 0.3));
+}
+
+/* Cada logo con posición, tamaño y animación diferente */
+.float-1 {
+    width: 120px;
+    top: 10%;
+    left: 5%;
+    animation: float1 20s ease-in-out infinite;
+}
+
+.float-2 {
+    width: 80px;
+    top: 20%;
+    right: 10%;
+    animation: float2 25s ease-in-out infinite;
+}
+
+.float-3 {
+    width: 150px;
+    top: 40%;
+    left: 15%;
+    animation: float3 18s ease-in-out infinite;
+}
+
+.float-4 {
+    width: 100px;
+    top: 60%;
+    right: 20%;
+    animation: float4 22s ease-in-out infinite;
+}
+
+.float-5 {
+    width: 90px;
+    top: 75%;
+    left: 8%;
+    animation: float5 28s ease-in-out infinite;
+}
+
+.float-6 {
+    width: 130px;
+    top: 85%;
+    right: 5%;
+    animation: float6 24s ease-in-out infinite;
+}
+
+.float-7 {
+    width: 70px;
+    top: 30%;
+    left: 50%;
+    animation: float7 26s ease-in-out infinite;
+}
+
+.float-8 {
+    width: 110px;
+    top: 50%;
+    right: 35%;
+    animation: float8 21s ease-in-out infinite;
+}
+
+/* Animaciones de flotación únicas para cada logo */
+@keyframes float1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(50px, 30px) rotate(5deg); }
+    50% { transform: translate(20px, 60px) rotate(-3deg); }
+    75% { transform: translate(-30px, 20px) rotate(2deg); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(-40px, 50px) rotate(-8deg); }
+    66% { transform: translate(30px, 80px) rotate(5deg); }
+}
+
+@keyframes float3 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    20% { transform: translate(60px, -20px) rotate(10deg); }
+    40% { transform: translate(80px, 40px) rotate(-5deg); }
+    60% { transform: translate(20px, 70px) rotate(8deg); }
+    80% { transform: translate(-40px, 30px) rotate(-3deg); }
+}
+
+@keyframes float4 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-60px, -40px) rotate(-10deg); }
+}
+
+@keyframes float5 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(40px, -50px) rotate(7deg); }
+    50% { transform: translate(70px, -20px) rotate(-4deg); }
+    75% { transform: translate(30px, 30px) rotate(3deg); }
+}
+
+@keyframes float6 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(-50px, -60px) rotate(-12deg); }
+    66% { transform: translate(-20px, -30px) rotate(6deg); }
+}
+
+@keyframes float7 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(40px, 50px) rotate(15deg); }
+}
+
+@keyframes float8 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-30px, 40px) rotate(-6deg); }
+    50% { transform: translate(-60px, 20px) rotate(8deg); }
+    75% { transform: translate(-20px, -30px) rotate(-4deg); }
+}
 
 /* ===== 🪟 NAVBAR VIDRIO PURO ===== */
 .navbar {
@@ -155,7 +268,6 @@ body {
         inset 0 0 40px rgba(255, 64, 129, 0.1);
 }
 
-/* Borde neón animado */
 .promos-card::before {
     content: '';
     position: absolute;
@@ -169,7 +281,6 @@ body {
     animation: neonBorder 8s ease infinite;
 }
 
-/* Efecto de brillo interior */
 .promos-card::after {
     content: '';
     position: absolute;
@@ -185,7 +296,6 @@ body {
     50% { background-position: 100% 50%; }
 }
 
-/* Efecto de scan line futurista */
 .promos-card .promo-content::before {
     content: '';
     position: absolute;
@@ -432,4 +542,14 @@ body {
     .footer-bottom { flex-direction: column; text-align: center; }
     .whatsapp-float { width: 55px; height: 55px; bottom: 20px; right: 20px; }
     .whatsapp-float svg { width: 26px !important; height: 26px !important; }
+    
+    /* Logos flotantes más pequeños en móvil */
+    .float-1 { width: 80px; }
+    .float-2 { width: 60px; }
+    .float-3 { width: 100px; }
+    .float-4 { width: 70px; }
+    .float-5 { width: 65px; }
+    .float-6 { width: 90px; }
+    .float-7 { width: 50px; }
+    .float-8 { width: 75px; }
 }
