@@ -18,10 +18,8 @@ body {
 /* ===== 💎 LOGOS FLOTANTES DE FONDO ===== */
 .floating-logos {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     z-index: 0;
     pointer-events: none;
     overflow: hidden;
@@ -51,7 +49,7 @@ body {
 @keyframes float7 { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(40px, 50px) rotate(15deg); } }
 @keyframes float8 { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 25% { transform: translate(-30px, 40px) rotate(-6deg); } 50% { transform: translate(-60px, 20px) rotate(8deg); } 75% { transform: translate(-20px, -30px) rotate(-4deg); } }
 
-/* ===== 🪟 NAVBAR VIDRIO PURO (PC) ===== */
+/* ===== 🪟 NAVBAR VIDRIO PURO ===== */
 .navbar {
     position: fixed;
     top: 20px; left: 20px; right: 20px;
@@ -73,7 +71,6 @@ body {
 .logo-img { height: 140px; width: auto; object-fit: contain; transition: transform 0.3s ease; display: block; }
 .logo-img:hover { transform: scale(1.05); }
 
-/* 💎 BOTÓN RESERVAR - CRISTAL CON DESTELLO ROSADO */
 .nav-btn {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
@@ -94,10 +91,8 @@ body {
 .nav-btn::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 143, 171, 0.6), rgba(216, 27, 96, 0.4), transparent);
     transition: left 0.6s ease;
 }
@@ -147,6 +142,124 @@ body {
 .video-container { width: 100%; overflow: hidden; border-radius: 18px; }
 .video-futuristic { width: 100%; height: auto; display: block; }
 .video-buttons { text-align: center; padding: 20px 10px 10px; }
+
+/* ===== 🎨 GALERÍA DE SERVICIOS CON TARJETAS CRISTAL ROSADO ===== */
+.gallery-section {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    text-align: center;
+    background: linear-gradient(135deg, #ff4081, #e91e8c, #9d4edd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    text-shadow: 0 0 30px rgba(255, 64, 129, 0.5);
+}
+
+.gallery-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.gallery-card {
+    background: rgba(255, 143, 171, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(255, 64, 129, 0.15);
+    transition: all 0.4s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(255, 64, 129, 0.3);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 64, 129, 0.9), transparent);
+    padding: 30px 15px 15px;
+    text-align: center;
+}
+
+.gallery-overlay h3 {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.service-item {
+    background: rgba(255, 143, 171, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(255, 64, 129, 0.1);
+}
+
+.service-item:hover {
+    background: rgba(255, 143, 171, 0.3);
+    transform: translateX(5px);
+    box-shadow: 0 6px 25px rgba(255, 64, 129, 0.2);
+}
+
+.service-icon {
+    font-size: 1.5rem;
+}
 
 /* ===== 🚀 CARTEL PROMOCIONES SUPER FUTURISTA ===== */
 .promos-card {
@@ -243,10 +356,8 @@ body {
 .btn-primary::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 143, 171, 0.6), rgba(216, 27, 96, 0.4), transparent);
     transition: left 0.6s ease;
 }
@@ -266,7 +377,6 @@ body {
 .btn-large { width: 100%; max-width: 450px; font-size: 1.2rem; padding: 18px 32px; }
 .contact-buttons { text-align: center; padding: 20px 10px 10px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
 
-/* ===== TELÉFONO CLICABLE ===== */
 .phone-link {
     color: #1a1a1a;
     text-decoration: none;
@@ -291,11 +401,9 @@ body {
 /* ===== 💎 WHATSAPP FLOTANTE ROSA Y NEGRO ===== */
 .whatsapp-float { 
     position: fixed; 
-    bottom: 30px; 
-    right: 30px; 
+    bottom: 30px; right: 30px; 
     background: linear-gradient(135deg, #ff4081 0%, #d81b60 50%, #1a1a1a 100%);
-    width: 60px; 
-    height: 60px; 
+    width: 60px; height: 60px; 
     border-radius: 50%; 
     display: flex; 
     align-items: center; 
@@ -320,146 +428,116 @@ body {
 .close-btn:hover { color: #ff8fab; }
 
 /* ============================================ */
-/* 📱 OPTIMIZACIÓN PARA MÓVIL (LA MÁS IMPORTANTE) */
+/* 📱 OPTIMIZACIÓN PARA MÓVIL */
 /* ============================================ */
 @media (max-width: 768px) {
     body { 
-        padding-top: 100px; /* Menos espacio arriba */
+        padding-top: 100px;
         padding-bottom: 20px;
         font-size: 16px;
     }
     
-    /* Navbar compacto y pegado arriba */
     .navbar { 
-        top: 8px; 
-        left: 8px; 
-        right: 8px; 
-        height: 70px; /* Más bajo */
+        top: 8px; left: 8px; right: 8px; 
+        height: 70px;
         padding: 0 12px; 
         border-radius: 16px;
     }
     
-    /* Logo más pequeño en móvil */
-    .logo-img { 
-        height: 62px; 
-    }
+    .logo-img { height: 62px; }
     
-    /* Botón reservar más compacto */
     .nav-btn { 
         padding: 8px 16px; 
         font-size: 0.9rem; 
         border-radius: 20px;
     }
     
-    /* Tarjetas más pegadas a los bordes */
     .card { 
         margin: 15px 8px; 
         padding: 12px; 
         border-radius: 18px;
     }
     
-    /* Imágenes con bordes más pequeños */
-    .img-full { 
-        border-radius: 14px; 
+    .img-full { border-radius: 14px; }
+    
+    /* Galería optimizada para móvil */
+    .gallery-section {
+        margin: 15px auto;
+        padding: 0 8px;
     }
     
-    /* Promociones optimizadas */
-    .promo-content { 
-        padding: 25px 15px; 
-    }
-    .promo-title { 
-        font-size: 1.7rem; 
-        margin-bottom: 15px;
-    }
-    .promo-text { 
-        font-size: 1rem; 
-        line-height: 1.6;
-        margin-bottom: 15px;
+    .gallery-title {
+        font-size: 1.7rem;
+        margin-bottom: 8px;
     }
     
-    /* Botones ocupan todo el ancho disponible */
+    .gallery-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .gallery-img {
+        height: 220px;
+    }
+    
+    .gallery-overlay h3 {
+        font-size: 1.1rem;
+    }
+    
+    .service-item {
+        padding: 14px 16px;
+        font-size: 1rem;
+    }
+    
+    .service-icon {
+        font-size: 1.3rem;
+    }
+    
+    .promo-content { padding: 25px 15px; }
+    .promo-title { font-size: 1.7rem; margin-bottom: 15px; }
+    .promo-text { font-size: 1rem; line-height: 1.6; margin-bottom: 15px; }
+    
     .btn-primary { 
         font-size: 1rem; 
         padding: 14px 20px; 
         width: calc(100% - 20px); 
         margin: 8px 10px;
     }
-    .btn-large { 
-        font-size: 1rem; 
-        padding: 16px 20px; 
-        max-width: 100%;
-    }
+    .btn-large { font-size: 1rem; padding: 16px 20px; max-width: 100%; }
     
-    /* Espaciado de botones de contacto */
-    .contact-buttons { 
-        padding: 15px 5px 5px; 
-        gap: 10px;
-    }
+    .contact-buttons { padding: 15px 5px 5px; gap: 10px; }
     
-    /* Footer en una columna */
-    .footer-card { 
-        padding: 25px 15px 20px; 
-        margin: 15px 8px;
-    }
-    .footer-row { 
-        grid-template-columns: 1fr; 
-        gap: 20px; 
-    }
-    .footer-col h4 { 
-        font-size: 1.1rem; 
-        margin-bottom: 10px;
-    }
-    .footer-col li { 
-        font-size: 0.95rem; 
-        margin-bottom: 8px;
-    }
-    .footer-bottom { 
-        flex-direction: column; 
-        text-align: center; 
-        padding-top: 15px;
-    }
-    .footer-bottom p { 
-        font-size: 0.85rem; 
-    }
+    .footer-card { padding: 25px 15px 20px; margin: 15px 8px; }
+    .footer-row { grid-template-columns: 1fr; gap: 20px; }
+    .footer-col h4 { font-size: 1.1rem; margin-bottom: 10px; }
+    .footer-col li { font-size: 0.95rem; margin-bottom: 8px; }
+    .footer-bottom { flex-direction: column; text-align: center; padding-top: 15px; }
+    .footer-bottom p { font-size: 0.85rem; }
     
-    /* WhatsApp más pequeño en móvil */
-    .whatsapp-float { 
-        width: 52px; 
-        height: 52px; 
-        bottom: 15px; 
-        right: 15px; 
-    }
-    .whatsapp-float svg { 
-        width: 24px !important; 
-        height: 24px !important; 
-    }
+    .whatsapp-float { width: 52px; height: 52px; bottom: 15px; right: 15px; }
+    .whatsapp-float svg { width: 24px !important; height: 24px !important; }
     
-    /* 🎯 SOLO 3 LOGOS FLOTANTES EN MÓVIL (más pequeños) */
+    .hero-overlay { margin-top: 15px; margin-bottom: 5px; }
+    .video-buttons { padding: 15px 5px 5px; }
+    
     .float-1 { width: 60px; top: 15%; left: -10px; }
     .float-2 { width: 50px; top: 35%; right: -10px; }
     .float-3 { width: 70px; top: 60%; left: -15px; }
-    .float-4, .float-5, .float-6, .float-7, .float-8 { 
-        display: none; /* Ocultamos los demás para no estorbar */
-    }
-    
-    /* Hero overlay con menos margen */
-    .hero-overlay { 
-        margin-top: 15px; 
-        margin-bottom: 5px;
-    }
-    
-    /* Video buttons con menos padding */
-    .video-buttons { 
-        padding: 15px 5px 5px; 
-    }
+    .float-4, .float-5, .float-6, .float-7, .float-8 { display: none; }
 }
 
-/* 📱 MÓVILES MUY PEQUEÑOS (iPhone SE, etc.) */
 @media (max-width: 400px) {
     body { padding-top: 90px; }
     .navbar { height: 60px; }
     .logo-img { height: 52px; }
     .nav-btn { padding: 6px 12px; font-size: 0.85rem; }
+    .gallery-title { font-size: 1.5rem; }
+    .gallery-img { height: 200px; }
     .promo-title { font-size: 1.5rem; }
     .promo-text { font-size: 0.95rem; }
     .btn-primary { font-size: 0.95rem; padding: 12px 18px; }
