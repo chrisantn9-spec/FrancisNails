@@ -1,8 +1,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ===== FONDO ROSA PASTEL ===== */
+/* ===== FUENTES ESPECIALES ===== */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
     color: #1a1a1a;
     background: linear-gradient(135deg, #ff8fab 0%, #ffb3c6 50%, #ffc2d1 100%);
     background-attachment: fixed;
@@ -15,7 +15,11 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== 💎 LOGOS FM FLOTANTES ===== */
+h1, h2, h3, h4, .footer-brand-name, .footer-certified, .gallery-title {
+    font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+/* ===== LOGOS FM FLOTANTES ===== */
 .floating-logos {
     position: fixed;
     top: 0; left: 0;
@@ -39,7 +43,7 @@ body {
 @keyframes float2 { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(-40px, 60px) rotate(-8deg); } }
 @keyframes float3 { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(50px, 40px) rotate(10deg); } }
 
-/* ===== 🦋 MARIPOSAS FLOTANTES ===== */
+/* ===== MARIPOSAS FLOTANTES ===== */
 .floating-butterflies {
     position: fixed;
     top: 0; left: 0;
@@ -106,7 +110,7 @@ body {
     100% { transform: translate(-110vw, 0) rotate(0deg) scaleX(-1); }
 }
 
-/* ===== 🪟 NAVBAR VIDRIO PURO ===== */
+/* ===== NAVBAR ===== */
 .navbar {
     position: fixed;
     top: 20px; left: 20px; right: 20px;
@@ -136,13 +140,15 @@ body {
     padding: 14px 30px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.15rem;
+    font-family: 'Cormorant Garamond', serif;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(216, 27, 96, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.5);
     position: relative;
     overflow: hidden;
+    letter-spacing: 1px;
 }
 
 .nav-btn::after {
@@ -163,7 +169,7 @@ body {
 
 .nav-btn:hover::after { left: 100%; }
 
-/* ===== 🪟 CARTELES VIDRIO PURO ===== */
+/* ===== CARTELES ===== */
 .card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px) saturate(180%);
@@ -200,7 +206,7 @@ body {
 .video-futuristic { width: 100%; height: auto; display: block; }
 .video-buttons { text-align: center; padding: 20px 10px 10px; }
 
-/* ===== 🎨 GALERÍA DE SERVICIOS ===== */
+/* ===== GALERÍA ===== */
 .gallery-section {
     max-width: 1100px;
     margin: 30px auto;
@@ -210,22 +216,26 @@ body {
 }
 
 .gallery-title {
-    font-size: 2.4rem;
-    font-weight: 900;
+    font-size: 3rem;
+    font-weight: 700;
     text-align: center;
     background: linear-gradient(135deg, #ff4081, #e91e8c, #9d4edd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 10px;
+    font-style: italic;
+    letter-spacing: 2px;
 }
 
 .gallery-subtitle {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #1a1a1a;
     margin-bottom: 30px;
-    font-weight: 600;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 1px;
 }
 
 .gallery-grid {
@@ -272,9 +282,32 @@ body {
 
 .gallery-overlay h3 {
     color: white;
-    font-size: 1.3rem;
-    font-weight: 800;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+/* 🖼️ SERVICIOS DESTACADO */
+.servicios-destacado {
+    margin: 30px 0;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(255, 64, 129, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.servicios-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.servicios-destacado:hover .servicios-img {
+    transform: scale(1.02);
 }
 
 .services-list {
@@ -294,11 +327,13 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: #1a1a1a;
+    font-family: 'Cormorant Garamond', serif;
     transition: all 0.3s ease;
     box-shadow: 0 4px 20px rgba(255, 64, 129, 0.1);
+    letter-spacing: 0.5px;
 }
 
 .service-item:hover {
@@ -306,9 +341,23 @@ body {
     transform: translateX(5px);
 }
 
-.service-icon { font-size: 1.5rem; }
+/* Íconos SVG elegantes en lugar de emojis */
+.service-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    color: #d81b60;
+}
 
-/* ===== 🚀 PROMOCIONES FUTURISTA ===== */
+.service-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: #d81b60;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* ===== PROMOCIONES ===== */
 .promos-card {
     background: rgba(26, 26, 26, 0.15);
     backdrop-filter: blur(25px) saturate(200%);
@@ -347,23 +396,38 @@ body {
 
 .promo-title { 
     font-size: 2.6rem;
-    font-weight: 900; 
+    font-weight: 700; 
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     background: linear-gradient(135deg, #ff4081, #e91e8c, #9d4edd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 25px;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
     animation: titleGlow 2s ease-in-out infinite alternate;
 }
 
 @keyframes titleGlow { from { filter: drop-shadow(0 0 10px rgba(255, 64, 129, 0.6)); } to { filter: drop-shadow(0 0 20px rgba(157, 78, 221, 0.8)); } }
 
-.promo-text { font-size: 1.3rem; color: #ffffff; line-height: 1.8; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
+.promo-text { 
+    font-size: 1.3rem; 
+    color: #ffffff; 
+    line-height: 1.8; 
+    margin-bottom: 20px; 
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Cormorant Garamond', serif;
+}
 .promo-text:last-child { margin-bottom: 0; }
-.promo-text strong { background: linear-gradient(135deg, #ff4081, #ffeb3b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+.promo-text strong { 
+    background: linear-gradient(135deg, #ff4081, #ffeb3b); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    font-weight: 700; 
+}
 
-/* ===== 💎 BOTONES ===== */
+/* ===== BOTONES ===== */
 .hero-overlay { text-align: center; margin-top: 24px; margin-bottom: 8px; }
 
 .btn-primary {
@@ -378,8 +442,10 @@ body {
     padding: 16px 32px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.2rem;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 1px;
     transition: all 0.3s ease;
     box-shadow: 0 6px 20px rgba(216, 27, 96, 0.2);
     margin: 10px 0;
@@ -419,24 +485,22 @@ body {
     font-size: 1.15rem;
     transition: all 0.3s ease;
     border-bottom: 2px dashed rgba(216, 27, 96, 0.5);
+    font-family: 'Cormorant Garamond', serif;
 }
 .phone-link:hover { color: #d81b60; border-bottom: 2px solid #d81b60; }
 
-/* ===== 🦋 FOOTER CRISTAL CON LETRAS ESPECIALES ===== */
+/* ===== FOOTER CRISTAL CON LETRAS ESPECIALES ===== */
 .footer-crystal {
     background: rgba(255, 143, 171, 0.15);
     backdrop-filter: blur(30px) saturate(200%);
     -webkit-backdrop-filter: blur(30px) saturate(200%);
     border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 30px;
-    box-shadow: 
-        0 8px 32px rgba(255, 64, 129, 0.2),
-        inset 0 0 30px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(255, 64, 129, 0.2), inset 0 0 30px rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
 }
 
-/* Brillo que recorre el footer */
 .footer-crystal::before {
     content: '';
     position: absolute;
@@ -465,13 +529,19 @@ body {
 
 .footer-butterfly-left,
 .footer-butterfly-right {
-    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+    background-image: url('mariposa.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     animation: butterflyWing 3s ease-in-out infinite;
     filter: drop-shadow(0 0 10px rgba(255, 143, 171, 0.6));
 }
 
 .footer-butterfly-right {
     animation-delay: 1.5s;
+    transform: scaleX(-1);
 }
 
 @keyframes butterflyWing {
@@ -485,7 +555,7 @@ body {
 }
 
 .footer-brand-name {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 900;
     background: linear-gradient(135deg, #ffffff 0%, #ffb3c6 30%, #ff4081 50%, #e91e8c 70%, #ffffff 100%);
     background-size: 200% auto;
@@ -493,10 +563,9 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: crystalShine 3s linear infinite;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-shadow: 0 0 30px rgba(255, 64, 129, 0.5);
     margin-bottom: 10px;
-    font-family: 'Georgia', serif;
     font-style: italic;
 }
 
@@ -506,16 +575,15 @@ body {
 }
 
 .footer-certified {
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 600;
     color: #ffffff;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
     text-transform: uppercase;
     text-shadow: 
         0 0 10px rgba(255, 255, 255, 0.8),
         0 0 20px rgba(255, 64, 129, 0.6),
         0 2px 4px rgba(0, 0, 0, 0.3);
-    font-family: 'Georgia', serif;
     font-style: italic;
 }
 
@@ -528,21 +596,23 @@ body {
 }
 
 .footer-col h4 {
-    font-size: 1.2rem;
-    font-weight: 800;
+    font-size: 1.3rem;
+    font-weight: 700;
     color: #ffffff;
     margin-bottom: 12px;
     text-shadow: 0 2px 8px rgba(255, 64, 129, 0.5);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-style: italic;
 }
 
 .footer-col ul { list-style: none; }
 
 .footer-col li {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.95);
     margin-bottom: 8px;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .footer-bottom {
@@ -557,8 +627,9 @@ body {
 }
 
 .footer-bottom p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.9);
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .social-link {
@@ -571,6 +642,8 @@ body {
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 1px;
 }
 
 .social-link:hover {
@@ -579,7 +652,7 @@ body {
     box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
 }
 
-/* ===== 💎 WHATSAPP FLOTANTE ===== */
+/* ===== WHATSAPP FLOTANTE ===== */
 .whatsapp-float { 
     position: fixed; 
     bottom: 30px; right: 30px; 
@@ -620,28 +693,29 @@ body {
     
     .navbar { top: 8px; left: 8px; right: 8px; height: 70px; padding: 0 12px; border-radius: 16px; }
     .logo-img { height: 62px; }
-    .nav-btn { padding: 8px 16px; font-size: 0.9rem; border-radius: 20px; }
+    .nav-btn { padding: 8px 16px; font-size: 0.95rem; border-radius: 20px; letter-spacing: 0.5px; }
     .card { margin: 15px 8px; padding: 12px; border-radius: 18px; }
     .img-full { border-radius: 14px; }
     
     .gallery-section { margin: 15px auto; padding: 0 8px; }
-    .gallery-title { font-size: 1.7rem; margin-bottom: 8px; }
-    .gallery-subtitle { font-size: 1rem; margin-bottom: 20px; }
+    .gallery-title { font-size: 2rem; letter-spacing: 1px; }
+    .gallery-subtitle { font-size: 1.1rem; margin-bottom: 20px; }
     .gallery-grid { grid-template-columns: 1fr; gap: 15px; }
     .gallery-img { height: 220px; }
-    .gallery-overlay h3 { font-size: 1.1rem; }
-    .service-item { padding: 14px 16px; font-size: 1rem; }
-    .service-icon { font-size: 1.3rem; }
+    .gallery-overlay h3 { font-size: 1.2rem; }
+    .service-item { padding: 14px 16px; font-size: 1.05rem; }
+    .service-icon { width: 24px; height: 24px; }
+    
+    .servicios-destacado { margin: 20px 0; }
     
     .promo-content { padding: 25px 15px; }
-    .promo-title { font-size: 1.7rem; margin-bottom: 15px; }
-    .promo-text { font-size: 1rem; line-height: 1.6; margin-bottom: 15px; }
+    .promo-title { font-size: 1.8rem; margin-bottom: 15px; }
+    .promo-text { font-size: 1.05rem; line-height: 1.6; margin-bottom: 15px; }
     
-    .btn-primary { font-size: 1rem; padding: 14px 20px; width: calc(100% - 20px); margin: 8px 10px; }
-    .btn-large { font-size: 1rem; padding: 16px 20px; max-width: 100%; }
+    .btn-primary { font-size: 1.05rem; padding: 14px 20px; width: calc(100% - 20px); margin: 8px 10px; }
+    .btn-large { font-size: 1.05rem; padding: 16px 20px; max-width: 100%; }
     .contact-buttons { padding: 15px 5px 5px; gap: 10px; }
     
-    /* Footer cristal en móvil */
     .footer-crystal-content {
         flex-direction: column;
         gap: 10px;
@@ -650,17 +724,18 @@ body {
     
     .footer-butterfly-left,
     .footer-butterfly-right {
-        font-size: 2rem;
+        width: 40px;
+        height: 40px;
     }
     
     .footer-brand-name {
-        font-size: 2rem;
-        letter-spacing: 1px;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
     }
     
     .footer-certified {
-        font-size: 0.95rem;
-        letter-spacing: 2px;
+        font-size: 1rem;
+        letter-spacing: 3px;
     }
     
     .footer-info-row {
@@ -669,10 +744,10 @@ body {
         padding: 0 15px;
     }
     
-    .footer-col h4 { font-size: 1.1rem; }
-    .footer-col li { font-size: 0.95rem; }
+    .footer-col h4 { font-size: 1.15rem; letter-spacing: 1px; }
+    .footer-col li { font-size: 1rem; }
     .footer-bottom { flex-direction: column; text-align: center; padding: 15px; }
-    .footer-bottom p { font-size: 0.85rem; }
+    .footer-bottom p { font-size: 0.9rem; }
     
     .whatsapp-float { width: 52px; height: 52px; bottom: 15px; right: 15px; }
     .whatsapp-float svg { width: 24px !important; height: 24px !important; }
@@ -698,11 +773,11 @@ body {
     .navbar { height: 60px; }
     .logo-img { height: 52px; }
     .nav-btn { padding: 6px 12px; font-size: 0.85rem; }
-    .gallery-title { font-size: 1.5rem; }
+    .gallery-title { font-size: 1.7rem; }
     .gallery-img { height: 200px; }
     .promo-title { font-size: 1.5rem; }
     .promo-text { font-size: 0.95rem; }
     .btn-primary { font-size: 0.95rem; padding: 12px 18px; }
-    .footer-brand-name { font-size: 1.7rem; }
-    .footer-certified { font-size: 0.85rem; letter-spacing: 1px; }
+    .footer-brand-name { font-size: 1.8rem; }
+    .footer-certified { font-size: 0.85rem; letter-spacing: 2px; }
 }
