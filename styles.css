@@ -132,8 +132,21 @@ h1, h2, h3, h4, .footer-brand-name, .footer-certified, .gallery-title, .gallery-
 .phone-link:hover { color: #d81b60; border-bottom: 2px solid #d81b60; }
 
 /* ===== FOOTER CRISTAL ===== */
-.footer-crystal { background: rgba(255, 143, 171, 0.15); backdrop-filter: blur(30px) saturate(200%); -webkit-backdrop-filter: blur(30px) saturate(200%); border: 1px solid rgba(255, 255, 255, 0.7); border-radius: 30px; box-shadow: 0 8px 32px rgba(255, 64, 129, 0.2), inset 0 0 30px rgba(255, 255, 255, 0.1); position: relative; overflow: hidden; }
-.footer-crystal::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); animation: footerShine 4s ease-in-out infinite; pointer-events: none; }
+.footer-crystal { 
+    background: rgba(255, 143, 171, 0.15); 
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.7); 
+    border-radius: 30px;
+    box-shadow: 0 8px 32px rgba(255, 64, 129, 0.2), inset 0 0 30px rgba(255, 255, 255, 0.1);
+    position: relative; 
+    overflow: hidden;
+}
+.footer-crystal::before {
+    content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: footerShine 4s ease-in-out infinite; pointer-events: none;
+}
 @keyframes footerShine { 0% { left: -100%; } 50%, 100% { left: 100%; } }
 
 .footer-crystal-content { display: flex; align-items: center; justify-content: center; gap: 20px; padding: 30px 20px 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.3); margin-bottom: 25px; position: relative; }
@@ -143,10 +156,34 @@ h1, h2, h3, h4, .footer-brand-name, .footer-certified, .gallery-title, .gallery-
 @keyframes butterflyWing { 0%, 100% { transform: scale(1) rotate(-5deg); } 50% { transform: scale(1.1) rotate(5deg); } }
 
 .footer-main-text { text-align: center; flex: 1; }
-.footer-brand-name { font-size: 3.5rem; font-weight: 900; font-style: italic; background: linear-gradient(135deg, #ffffff 0%, #ffb3c6 30%, #ff4081 50%, #e91e8c 70%, #ffffff 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: crystalShine 3s linear infinite; letter-spacing: 3px; text-shadow: 0 0 30px rgba(255, 64, 129, 0.5); margin-bottom: 10px; }
+.footer-brand-name { 
+    font-size: 3.5rem; 
+    font-weight: 900; 
+    font-style: italic;
+    background: linear-gradient(135deg, #ffffff 0%, #ffb3c6 30%, #ff4081 50%, #e91e8c 70%, #ffffff 100%);
+    background-size: 200% auto; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    animation: crystalShine 3s linear infinite; 
+    letter-spacing: 3px;
+    text-shadow: 0 0 30px rgba(255, 64, 129, 0.5); 
+    margin-bottom: 10px;
+    /* Sombra de texto para mejor legibilidad */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
 @keyframes crystalShine { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
 
-.footer-certified { font-size: 1.4rem; font-weight: 600; color: #ffffff; letter-spacing: 6px; text-transform: uppercase; text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 64, 129, 0.6), 0 2px 4px rgba(0, 0, 0, 0.3); font-style: italic; }
+.footer-certified { 
+    font-size: 1.4rem; 
+    font-weight: 600; 
+    color: #ffffff; 
+    letter-spacing: 6px;
+    text-transform: uppercase; 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 64, 129, 0.6), 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-style: italic;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
 
 .footer-info-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 25px; padding: 0 20px; }
 .footer-col h4 { font-size: 1.3rem; font-weight: 700; color: #ffffff; margin-bottom: 12px; text-shadow: 0 2px 8px rgba(255, 64, 129, 0.5); letter-spacing: 2px; font-style: italic; }
@@ -158,11 +195,11 @@ h1, h2, h3, h4, .footer-brand-name, .footer-certified, .gallery-title, .gallery-
 .social-link { color: #ffffff; text-decoration: none; font-weight: 700; font-size: 1rem; background: rgba(255, 64, 129, 0.3); padding: 8px 20px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.5); transition: all 0.3s ease; font-family: 'Cormorant Garamond', serif; letter-spacing: 1px; }
 .social-link:hover { background: rgba(255, 64, 129, 0.6); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4); }
 
-/* ===== 💎 WHATSAPP FLOTANTE (TAMAÑO REDUCIDO) ===== */
+/* ===== WHATSAPP FLOTANTE ===== */
 .whatsapp-float { 
     position: fixed; bottom: 30px; right: 30px; 
     background: linear-gradient(135deg, #ff4081 0%, #d81b60 50%, #1a1a1a 100%);
-    width: 50px; height: 50px; /* Más pequeño */
+    width: 50px; height: 50px; 
     border-radius: 50%; display: flex; align-items: center; justify-content: center; 
     box-shadow: 0 6px 25px rgba(255, 64, 129, 0.5), 0 0 40px rgba(216, 27, 96, 0.3);
     z-index: 1000; transition: all 0.3s ease; text-decoration: none; 
@@ -179,7 +216,7 @@ h1, h2, h3, h4, .footer-brand-name, .footer-certified, .gallery-title, .gallery-
 .close-btn:hover { color: #ff8fab; }
 
 /* ============================================ */
-/* 📱 MÓVIL */
+/* 📱 MÓVIL - FOOTER MEJORADO PARA QUE SE VEA BIEN */
 /* ============================================ */
 @media (max-width: 768px) {
     body { padding-top: 100px; padding-bottom: 20px; font-size: 16px; }
@@ -207,17 +244,68 @@ h1, h2, h3, h4, .footer-brand-name, .footer-certified, .gallery-title, .gallery-
     .btn-large { font-size: 1.05rem; padding: 16px 20px; max-width: 100%; }
     .contact-buttons { padding: 15px 5px 5px; gap: 10px; }
     
-    .footer-crystal-content { flex-direction: column; gap: 10px; padding: 20px 15px 15px; }
-    .footer-butterfly-img { width: 40px; }
-    .footer-brand-name { font-size: 2.2rem; letter-spacing: 2px; }
-    .footer-certified { font-size: 1rem; letter-spacing: 3px; }
-    .footer-info-row { grid-template-columns: 1fr; gap: 20px; padding: 0 15px; }
-    .footer-col h4 { font-size: 1.15rem; letter-spacing: 1px; }
-    .footer-col li { font-size: 1rem; }
-    .footer-bottom { flex-direction: column; text-align: center; padding: 15px; }
-    .footer-bottom p { font-size: 0.9rem; }
+    /* ✅ FOOTER CRISTAL MEJORADO PARA MÓVIL */
+    .footer-crystal {
+        background: rgba(255, 143, 171, 0.35); /* Más opaco para mejor contraste */
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        margin: 15px 8px;
+    }
     
-    /* WhatsApp más pequeño en móvil */
+    .footer-crystal-content { 
+        flex-direction: column; 
+        gap: 12px; 
+        padding: 25px 15px 20px;
+        background: rgba(255, 64, 129, 0.15); /* Fondo sutil detrás del título */
+        border-radius: 20px;
+        margin: 0 10px;
+    }
+    
+    .footer-butterfly-img { 
+        width: 50px; 
+        order: 1;
+    }
+    .footer-butterfly-img.right { order: 3; }
+    .footer-main-text { order: 2; width: 100%; }
+    
+    .footer-brand-name { 
+        font-size: 2.5rem; /* Más grande en móvil */
+        letter-spacing: 2px;
+        /* Sombra más fuerte para que se lea bien */
+        filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+    }
+    
+    .footer-certified { 
+        font-size: 1.1rem; 
+        letter-spacing: 3px;
+        /* Sombra más fuerte */
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    }
+    
+    .footer-info-row { 
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+        padding: 10px 15px 0;
+    }
+    
+    .footer-col h4 { 
+        font-size: 1.3rem; 
+        letter-spacing: 1px;
+        /* Sombra para mejor lectura */
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+    
+    .footer-col li { 
+        font-size: 1.1rem;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .footer-bottom { 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 15px;
+    }
+    .footer-bottom p { font-size: 0.95rem; }
+    
     .whatsapp-float { width: 46px; height: 46px; bottom: 15px; right: 15px; }
     .whatsapp-float svg { width: 20px !important; height: 20px !important; }
     
@@ -242,6 +330,6 @@ h1, h2, h3, h4, .footer-brand-name, .footer-certified, .gallery-title, .gallery-
     .promo-title { font-size: 1.5rem; }
     .promo-text { font-size: 0.95rem; }
     .btn-primary { font-size: 0.95rem; padding: 12px 18px; }
-    .footer-brand-name { font-size: 1.8rem; }
-    .footer-certified { font-size: 0.85rem; letter-spacing: 2px; }
+    .footer-brand-name { font-size: 2rem; }
+    .footer-certified { font-size: 0.95rem; letter-spacing: 2px; }
 }
